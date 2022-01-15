@@ -24,18 +24,11 @@ searchBtn.addEventListener('click', function(e){
         return;
     }
 
-    getData(word);
-})
-
-
-async function getData(word) {
-    loading.style.display = 'block';
-    
     var exists = false;
     for (var i = 0; i < dictionary.length; i++) {
         if (dictionary[i].indexOf(word) == 0) {
             exists = true;
-	    break;
+            break;
         }
     }
 
@@ -43,15 +36,12 @@ async function getData(word) {
     if (!exists) {
         loading.style.display = 'none';
         notFound.innerText = ' No result found';
-        return;
+    } else {
+        loading.style.display = 'none';
+        defBox.innerText = "Good!";
     }
 
-    // Result found 
-    loading.style.display = 'none';
-    defBox.innerText = "This is a legal Wordle word.";
-
-    console.log(data);
-}
+})
 
 function renderSound(soundName) {
     // https://media.merriam-webster.com/soundc11
