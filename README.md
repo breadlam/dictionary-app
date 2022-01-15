@@ -1,5 +1,3 @@
 # Wordle dictionary checker
 
-https://breadlam.github.io/dictionary-app/
-
-
+https://breadlam.github.io/wordle-dictionary/
