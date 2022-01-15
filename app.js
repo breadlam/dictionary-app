@@ -28,7 +28,7 @@ searchBtn.addEventListener('click', function(e){
     for (var i = 0; i < dictionary.length; i++) {
         if (dictionary[i].indexOf(word) == 0) {
             exists = true;
-            break;
+            //break;
         }
     }
 
