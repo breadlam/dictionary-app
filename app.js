@@ -56,7 +56,7 @@ searchBtn.addEventListener('click', function(e){
         notFound.innerText = word + ' not found.';
     } else if (prevanswer) {
 	loading.style.display = 'none';
-	var n = new Date();
+	var n = epoch;
 	n.setDate(epoch.getDate() + prevday);
         defBox.innerText = word + " was a Wordle answer on " + n;
     } else {
