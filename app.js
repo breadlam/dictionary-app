@@ -57,7 +57,7 @@ searchBtn.addEventListener('click', function(e){
     } else if (prevanswer) {
 	loading.style.display = 'none';
 	var n = new Date("06/18/2021");
-	n.setDate(epoch.getDate() + prevday);
+	n.setDate(n.getDate() + prevday);
 	var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         defBox.innerText = word + " was a Wordle answer on " + n.toLocaleDateString("en-US", options);
     } else {
