@@ -24,10 +24,10 @@ searchBtn.addEventListener('click', function(e){
         return;
     }
     
-    if (word.length != 5) {
-        alert('Wordle words are 5 letters!');
-        return;
-    }
+    //if (word.length != 5) {
+    //    alert('Wordle words are 5 letters!');
+    //    return;
+    //}
 
     var exists = false;
     for (var i = 0; i < dictionary.length; i++) {
@@ -40,10 +40,10 @@ searchBtn.addEventListener('click', function(e){
     // if empty result 
     if (!exists) {
         loading.style.display = 'none';
-        notFound.innerText = ' No result found';
+        notFound.innerText = word + ' not found.';
     } else {
         loading.style.display = 'none';
-        defBox.innerText = "Good!";
+        defBox.innerText = word + " is good.";
     }
 
 })
