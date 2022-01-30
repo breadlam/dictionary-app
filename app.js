@@ -53,7 +53,7 @@ searchBtn.addEventListener('click', function(e){
     // if empty result 
     if (!exists) {
         loading.style.display = 'none';
-        notFound.innerText = word + ' not in Wordle dictionary';
+        notFound.innerText = word + ' is not in the Wordle dictionary';
     } else if (prevanswer) {
 	loading.style.display = 'none';
 	var n = epoch;
