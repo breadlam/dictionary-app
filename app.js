@@ -23,6 +23,11 @@ searchBtn.addEventListener('click', function(e){
         alert('Word is required');
         return;
     }
+    
+    if (word.length != 5) {
+        alert('Wordle words are 5 letters!');
+        return;
+    }
 
     var exists = false;
     for (var i = 0; i < dictionary.length; i++) {
