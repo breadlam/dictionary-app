@@ -22,6 +22,7 @@ searchBtn.addEventListener('click', function(e){
 
     // Get input data
     let word = input.value;
+    word = word.toLowerCase();
     // call API get data
     if (word === '') {
         alert('Word is required');
@@ -53,16 +54,16 @@ searchBtn.addEventListener('click', function(e){
     // if empty result 
     if (!exists) {
         loading.style.display = 'none';
-        notFound.innerText = word + ' is not in the Wordle dictionary';
+        notFound.innerText = word.toUpperCase() + ' is not in the Wordle dictionary';
     } else if (prevanswer) {
 	loading.style.display = 'none';
 	let n = new Date("06/19/2021");
 	n.setDate(n.getDate() + prevday);
 	let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        defBox.innerText = word + " was a Wordle answer on " + n.toLocaleDateString("en-US", options);
+        defBox.innerText = word.toUpperCase() + " was a Wordle answer on " + n.toLocaleDateString("en-US", options);
     } else {
         loading.style.display = 'none';
-        defBox.innerText = word + " is in the Wordle dictionary";
+        defBox.innerText = word.toUpperCase() + " is in the Wordle dictionary";
     }
 
 })
