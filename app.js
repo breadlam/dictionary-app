@@ -53,15 +53,16 @@ searchBtn.addEventListener('click', function(e){
     // if empty result 
     if (!exists) {
         loading.style.display = 'none';
-        notFound.innerText = word + ' not found.';
+        notFound.innerText = word + ' not in Wordle dictionary';
     } else if (prevanswer) {
 	loading.style.display = 'none';
 	var n = epoch;
 	n.setDate(epoch.getDate() + prevday);
-        defBox.innerText = word + " was a Wordle answer on " + n;
+	var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        defBox.innerText = word + " was a Wordle answer on " + n.toLocaleDateString("en-US", options);
     } else {
         loading.style.display = 'none';
-        defBox.innerText = word + " is good.";
+        defBox.innerText = word + " is in the Wordle dictionary";
     }
 
 })
