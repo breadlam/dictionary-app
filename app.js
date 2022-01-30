@@ -41,7 +41,7 @@ searchBtn.addEventListener('click', function(e){
     if (exists) {
 	let today = new Date();
 	let h = parseInt((today.getTime() - epoch.getTime()) / (1000 * 60 * 60 * 24));
-	for (var i = 0; i < h-1; i++) {
+	for (var i = 0; i < h; i++) {
       	    if (answers[i].indexOf(word) == 0) {
                 prevanswer = true;
 		prevday = i;
