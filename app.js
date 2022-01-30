@@ -41,10 +41,9 @@ searchBtn.addEventListener('click', function(e){
     }
 
     var exists = false;
-    for (var i = 0; i < dictionary.length; i++) {
-        if (dictionary[i].indexOf(word) == 0) {
+    if (word.length == 5) {
+        if (dictionary.indexOf(word) > -1) {
             exists = true;
-            break;
         }
     }
 
