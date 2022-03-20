@@ -32,9 +32,7 @@ searchBtn.addEventListener('click', function(e){
     defBox.innerText = '';
 
     // Get input data
-    let word = input.value;
-    word = word.trim();
-    word = word.toLowerCase();
+    let word = input.value.trim().toLowerCase();
     // call API get data
     if (word === '') {
         alert('Word is required');
