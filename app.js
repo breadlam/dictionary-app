@@ -66,6 +66,7 @@ searchBtn.addEventListener('click', function(e){
     if (!exists) {
         loading.style.display = 'none';
         notFound.innerText = word.toUpperCase() + ' is not in the Wordle dictionary';
+	notFound.style.color = "red";
     } else if (prevanswer) {
 	loading.style.display = 'none';
 	let n = new Date("06/19/2021");
